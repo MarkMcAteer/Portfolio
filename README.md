@@ -1,6 +1,6 @@
 # Project Portfolio Website
 
-## Mark McAteer
+Mark McAteer
 
-> A website deisgned using bootstrap that displays my recent projects in Unity and UE5. 
+> A website designed using bootstrap that displays my recent projects in Unity and UE5. 
 
