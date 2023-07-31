@@ -63,9 +63,34 @@ https://templatemo.com/tm-552-video-catalog
 							<!-- Video description
 							<div class="tm-video-description-box"> -->
 								<h2 class="mb-5 tm-video-title"> Trade Simulator </h2>
-								<p class="mb-4"> <a href="https://markmcateer.pythonanywhere.com/">Click here to try.</a> </p>
-								<p class="mb-4"> This project follows a tutorial created SmartPoly which replicates a tropical island and emphasizes the landscaping tools as well as blending material layers. </p>
-							        <p class="mb-4"> The tropical island uses the water plugin and textures downloaded from the asset store. </p>
+								<p class="mb-4"> <a href="https://markmcateer.pythonanywhere.com/">(Click here to try.)</a> </p>
+							
+							        <h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h3>
+								<p class="mb-4"> The Trade Simulator allows for risk free practice in trading stocks. It uses data that is updated 
+									daily to reflect current market prices. Users can create an account, deposit pretend money, buy or sell stocks at the 
+									current market price, view transaction history, and analyze the data on a graph with the provided polynomial regression and 
+									linear regression lines.  </p> 
+
+								<h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Analysis </h3>
+								<p class="mb-4"> I created the Trade Simulator to practice my trading skills in a risk free environment. 
+									I began creating this by doing research on financial APIs and which ones had the best free tier. 
+									I originally used Alpha Vantage API but ran into some issues so I decided to go with the polygon.io API. 
+									This did include some limitations such as a max data history of 2 years as well as 5 API pulls per minute. 
+									One of the main problems I faced was that when a user interacted with the page, the data would be pulled from the API 
+									multiple times within one minute. This caused the page to crash, so I decided to cache the stock data and retrieve it 
+									from the cache when the page updated.  </p> 
+
+								<h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Software Decisions </h3>
+								<p class="mb-4"> Following the steps of other stock trading platforms such as Robinhood, I decided to use python for writing 
+									the backend code. This allowed for an easier creation of data structures and coding in general than what would 
+									have been my second choice, C++. To get my python code onto a website I decided to once again follow 
+									the steps of Robinhood and use Django. After learning the basics of Django, the transfer of the python 
+									code onto a website was a simple transition.  </p> 
+
+								<h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Libraries </h3>
+								<p class="mb-4"> Libraries that I used for the project included Pickle for storing username and password information,
+									NumPy for storing data and regression calculations, and Plotly and matplotlib for graphing.  </p> 
+							
 							<!--</div>-->
 						</div><!--
 						<div class="col-xl-4 col-lg-5">
