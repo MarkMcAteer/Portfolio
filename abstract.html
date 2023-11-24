@@ -58,125 +58,58 @@ https://templatemo.com/tm-552-video-catalog
 		<div class="container-fluid">
 			<div class="mx-auto tm-content-container">
 				<main>
-					<div class="row">
-                        <div class="col-12">
-                            <h2 class="tm-page-title mb-4">Abstract Data Types (ADT)</h2>  
-                        </div>
-                    </div>
-                    
-                    <div class="row tm-catalog-item-list">
-                        
-                        
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/trade.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="trade.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">List ADT</h3>
-                                <p class="tm-catalog-item-text"> Stock trading platform that uses real stock data, updated daily, to practice trading skills. </p>
-                            </div>
-                        </div>
+					<div class="row mb-5 pb-5">
+						<div class="col-12">
+							<!-- Video description
+							<div class="tm-video-description-box"> -->
+								<h1 class="mb-5 tm-video-title"> Abstract Data Types (ADT)  </h1>
+							
+							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
+								<p class="mb-4"> In this assignment we were tasked with creating 4 different sorting algorithms and a dynamically
+									allocated array of pseudo randomly generated numbers to test each with. </p> 
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/PacCover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="pacman.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Graph ADT</h3>
-                                <p class="tm-catalog-item-text"> Berkeley pacman project completed in my Artificial Intelligence course at UCSC. </p>
-                            </div>
-                        </div>
+								<h5> List ADT </h5>
+								<p class="mb-4">This program will utilize the List ADT by sorting an array of words. The array of words is taken line by line from an
+                                    input file and organized, alphabetically, having sorted indices stored in the List ADT. The sorted list of words will
+                                    then be printed to the output file. This program accepts the command line arguments:  ./Lex < inputfile > < outputfile >
+                                    after being compiled. It will simply sort the input file and send the sorted words to the output file. </p> 
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/firewall.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="censor.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">BigInt ADT </h3>
-                                <p class="tm-catalog-item-text"> Firewall built for censoring text files and replacing banned words with safe words. </p>
-                            </div>
-                        </div>
+								<h5> Graph ADT </h5>
+								<p class="mb-4"> This program will utilize the Graph and List ADTs. It first takes an input file and output file as paramters,
+                                    exiting if an invalid number of arguments are made. The input file will contain the number of vertices on the
+                                    first line, followed by pairs of edges and searches to run which can be terminated with an input "0 0".
+                                    After recieving input, the program will create an undirected graph which can then be searched through
+                                    by the breath first search algorithm. The output is printed to outfile and will consist of the adjacency
+                                    list representation along with the shortest possible paths specificed in the infile.  </p> 
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/sortcover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="abstract.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Dictionary ADT</h3>
-                                <p class="tm-catalog-item-text"> Collection of Abstract Data Types created in my Introductions to Data Structures and Algorithms course.  </p>
-                            </div>
-                        </div>
-                          
-                    </div>
-                    
-                </main>
-            </div> <!-- tm-content-container hiuhuuih -->
-        </div>
+								<h5> Matrix ADT </h5>
+								<p class="mb-4"> This program will utilize the Matrix Abstract Data type with a unqiue interpretation of
+                                    a Matrix. All elements containing zero will not be stored in order to achieve
+                                    maximum time efficeny. The program will perform a number of operations on two inputted
+                                    matricies and print the answers to the outfile. Once the program has been built, it can be executed with " /Sparse < in.txt >
+                                    < out.txt > ". Input files should start with a line declaring the n by n size of both
+                                    matrices, followed by the number of nnz for both matrices.
+                                    The next lines will contain all elements to be added to the matrix in the format of
+                                    int int double. Sparse will read the in file and perform the required operations. </p> 
+								
+								<h5> BigInt ADT </h5>
+								<p class="mb-4"> This program will utilize the BigInteger ADT by allowing for addition, subtraction, and
+                                    multiplaction on numbers larger than that which can be preformed by the basic C++ operators.
+                                    The input file takes two signed or unsigned large numbers seperated by a blank line. The
+                                    output file consists of a number of operations preformed on the two BigIntegers.  Once the program has been built, it can be executed with "./Arithmetic < in.txt > < out.txt >".</p> 
 
-        <div class="container-fluid">
-            <div id="content" class="mx-auto tm-content-container">
-                <main>
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="tm-page-title mb-4">Games</h2>  
-                        </div>
-                    </div>
-                    
-                    <div class="row tm-catalog-item-list">
+                                <h5> Dictionary ADT </h5>
+								<p class="mb-4">This program will use the newly created list Dictionary ADT by accepting words in a line by line file,
+                                    inputting the words into the ADT, and giving each a unique key. The dictionary will efficently store the words by
+                                    utilizing a Binary Search Tree. The main file, Order.cpp, will output the Dictionary in an alphabetical format using
+                                    an in order search as well as a preorder search. Once the program has been built, it can be executed with, " ./Order < infile > < outfile > ".</p> 
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/evocation.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="evocation.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>                            
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Unity: Evocation </h3>
-                                <p class="tm-catalog-item-text"> Platformer worked on in a team of 5 for a school project. </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/DeliveryMan.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="Delivery-Page.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>                            
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Construct3: Delivery Man</h3>
-                                <p class="tm-catalog-item-text">A four week class project worked on with 2 teammates.</p>
-                            </div>
-                        </div>
-                       
-                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                            <div class="position-relative tm-thumbnail-container">
-                                <img src="img/FirstGameCover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                <a href="video-page.html" class="position-absolute tm-img-overlay">
-                                    <i class="fas fa-play tm-overlay-icon"></i>
-                                </a>
-                            </div>    
-                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Unity: Cube Race</h3>
-                                <p class="tm-catalog-item-text"> Replication of a basic level system,
-                                  collision detection, and basic physics.</p>
-                            </div>
-                        </div>
-                          
-                    </div>
+								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
+								<p class="mb-4"> ADT Cover Image: <a href="https://www.boardinfinity.com/blog/quick-guide-to-abstract-data-types/">https://www.boardinfinity.com/blog/quick-guide-to-abstract-data-types/</a> </p> 
+							
+							<!--</div>-->
+						</div>
+					</div>
 				</main>
 			</div> <!-- .tm-content-container -->
 		</div>
@@ -197,64 +130,6 @@ https://templatemo.com/tm-552-video-catalog
     			}
     		});
     	});
-        function setVideoSize() {
-            const vidWidth = 1920;
-            const vidHeight = 1080;
-            let windowWidth = window.innerWidth;
-            let newVidWidth = windowWidth;
-            let newVidHeight = windowWidth * vidHeight / vidWidth;
-            let marginLeft = 0;
-            let marginTop = 0;
-
-            if (newVidHeight < 500) {
-                newVidHeight = 500;
-                newVidWidth = newVidHeight * vidWidth / vidHeight;
-            }
-
-            if(newVidWidth > windowWidth) {
-                marginLeft = -((newVidWidth - windowWidth) / 2);
-            }
-
-            if(newVidHeight > 720) {
-                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
-            }
-
-            const tmVideo = $('#tm-video');
-
-            tmVideo.css('width', newVidWidth);
-            tmVideo.css('height', newVidHeight);
-            tmVideo.css('margin-left', marginLeft);
-            tmVideo.css('margin-top', marginTop);
-        }
-
-        $(document).ready(function () {
-            /************** Video background *********/
-
-            setVideoSize();
-
-            // Set video background size based on window size
-            let timeout;
-            window.onresize = function () {
-                clearTimeout(timeout);
-                timeout = setTimeout(setVideoSize, 100);
-            };
-
-            // Play/Pause button for video background      
-            const btn = $("#tm-video-control-button");
-
-            btn.on("click", function (e) {
-                const video = document.getElementById("tm-video");
-                $(this).removeClass();
-
-                if (video.paused) {
-                    video.play();
-                    $(this).addClass("fas fa-pause");
-                } else {
-                    video.pause();
-                    $(this).addClass("fas fa-play");
-                }
-            });
-        })
     </script>
 </body>
 </html>
