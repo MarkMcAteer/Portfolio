@@ -58,63 +58,138 @@ https://templatemo.com/tm-552-video-catalog
 		<div class="container-fluid">
 			<div class="mx-auto tm-content-container">
 				<main>
-					<div class="row mb-5 pb-5">
-						<div class="col-12">
-							<!-- Video description
-							<div class="tm-video-description-box"> -->
-								<h1 class="mb-5 tm-video-title"> ABSTRACT  </h1>
-							
-							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
-								<p class="mb-4"> In this assignment we were tasked with creating 4 different sorting algorithms and a dynamically
-									allocated array of pseudo randomly generated numbers to test each with. </p> 
+					<div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-page-title mb-4">Programming</h2>  
+                        </div>
+                    </div>
+                    
+                    <div class="row tm-catalog-item-list">
+                        
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/trade.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="trade.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Trade Simulator</h3>
+                                <p class="tm-catalog-item-text"> Stock trading platform that uses real stock data, updated daily, to practice trading skills. </p>
+                            </div>
+                        </div>
 
-								<h5> Insert Sort </h5>
-								<p class="mb-4"> Insertion sort compares each element of the array to the preceding element counting down from
-									the length until 0. It simply checks whether the element is in the right place by checking the
-									element preceding it in the array. </p> 
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/PacCover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="pacman.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Berkeley AI: Pacman</h3>
+                                <p class="tm-catalog-item-text"> Berkeley pacman project completed in my Artificial Intelligence course at UCSC. </p>
+                            </div>
+                        </div>
 
-								<h5> Shell Sort </h5>
-								<p class="mb-4"> The shell sort algorithm uses the ideas of the gap sequence and the fact that any gap sequence
-									that ends with a gap of 1 has produced a sorted array. There are multiple different sequence
-									caps but we are using Knuths, 𝑂(𝑛^3/2). A generator is also replicated in Shell by setting a static
-									variable equal to the max and creating a static variable called first run. first_run is false on start,
-									but once the function runs it's true for all remaining calls.  </p> 
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/firewall.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="censor.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Firewall </h3>
+                                <p class="tm-catalog-item-text"> Firewall built for censoring text files and replacing banned words with safe words. </p>
+                            </div>
+                        </div>
 
-								<h5> Heap Sort </h5>
-								<p class="mb-4"> Heap sort mimics data into a binary tree checking if any of the parents, or numbers above, are
-									greater. If they are, it switches and re-builds the heap. </p> 
-								
-								<h5> Quick Sort </h5>
-								<p class="mb-4"> Quick sort uses a partition to split the array with a pivot. Elements less than the pivot go to a sub
-									array of numbers on the left and elements greater than the pivot go to a sub array on the right.
-									The quick sort function initializes a recursive function, quick_sorter, which continues to run until
-									the sort is complete.  </p> 
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/sortcover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="abstract.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Abstract Data Types</h3>
+                                <p class="tm-catalog-item-text"> Collection of Abstract Data Types created in my Introductions to Data Structures and Algorithms course.  </p>
+                            </div>
+                        </div>
 
-								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Analysis </h2>
-								<img src="img/sortanalysis.jpg" alt="404" width="500" height="333">
-								<p class="mb-4"> Graphing the elements run vs moves and comparisons gives a much clearer picture of
-									the efficiency in which these algorithms run. The moves and comparisons graphs on top,
-									representing a range of 100 elements, show a competitive change of rate between the sort
-									algorithms. At around 50 elements, insert beings to noticeably increase moves and
-									comparisons, much faster than the other three algorithms. In the middle moves and
-									comparisons graphs, with a range representing 1000, insert is clearly preformming many more
-									moves and comparisons. At this number of elements, heap also performs a noticeable amount
-									more moves and comparisons than insert and quick. On the last graph, with a range of 10000,
-									insert performs significantly worse than the other three algorithms.
-								</p> 
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/sortcover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="sort.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Sort Algorithms</h3>
+                                <p class="tm-catalog-item-text"> Firewall built for censoring text files and replacing banned words with safe words. </p>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    
+                </main>
+            </div> <!-- tm-content-container hiuhuuih -->
+        </div>
 
-								<p class="mb-4"> It’s clear from the graphs that insert runs much more moves and comparisons in order to
-									sort the elements. One reason for this is that insert sort has to check the element's validity one
-									by one for the length of the array. Insert works at a close rate as the other algorithms on small
-									numbers, but as the number of elements grows, its usefulness decreases.
-								</p> 
+        <div class="container-fluid">
+            <div id="content" class="mx-auto tm-content-container">
+                <main>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-page-title mb-4">Games</h2>  
+                        </div>
+                    </div>
+                    
+                    <div class="row tm-catalog-item-list">
 
-								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
-								<p class="mb-4"> Sort Cover Image: <a href="https://www.geeksforgeeks.org/recursive-insertion-sort/">https://www.geeksforgeeks.org/recursive-insertion-sort/</a> </p> 
-							
-							<!--</div>-->
-						</div>
-					</div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/evocation.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="evocation.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>                            
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title"> Unity: Evocation </h3>
+                                <p class="tm-catalog-item-text"> Platformer worked on in a team of 5 for a school project. </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/DeliveryMan.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="Delivery-Page.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>                            
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Construct3: Delivery Man</h3>
+                                <p class="tm-catalog-item-text">A four week class project worked on with 2 teammates.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                            <div class="position-relative tm-thumbnail-container">
+                                <img src="img/FirstGameCover.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                <a href="video-page.html" class="position-absolute tm-img-overlay">
+                                    <i class="fas fa-play tm-overlay-icon"></i>
+                                </a>
+                            </div>    
+                            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Unity: Cube Race</h3>
+                                <p class="tm-catalog-item-text"> Replication of a basic level system,
+                                  collision detection, and basic physics.</p>
+                            </div>
+                        </div>
+                          
+                    </div>
 				</main>
 			</div> <!-- .tm-content-container -->
 		</div>
@@ -135,6 +210,64 @@ https://templatemo.com/tm-552-video-catalog
     			}
     		});
     	});
+        function setVideoSize() {
+            const vidWidth = 1920;
+            const vidHeight = 1080;
+            let windowWidth = window.innerWidth;
+            let newVidWidth = windowWidth;
+            let newVidHeight = windowWidth * vidHeight / vidWidth;
+            let marginLeft = 0;
+            let marginTop = 0;
+
+            if (newVidHeight < 500) {
+                newVidHeight = 500;
+                newVidWidth = newVidHeight * vidWidth / vidHeight;
+            }
+
+            if(newVidWidth > windowWidth) {
+                marginLeft = -((newVidWidth - windowWidth) / 2);
+            }
+
+            if(newVidHeight > 720) {
+                marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
+            }
+
+            const tmVideo = $('#tm-video');
+
+            tmVideo.css('width', newVidWidth);
+            tmVideo.css('height', newVidHeight);
+            tmVideo.css('margin-left', marginLeft);
+            tmVideo.css('margin-top', marginTop);
+        }
+
+        $(document).ready(function () {
+            /************** Video background *********/
+
+            setVideoSize();
+
+            // Set video background size based on window size
+            let timeout;
+            window.onresize = function () {
+                clearTimeout(timeout);
+                timeout = setTimeout(setVideoSize, 100);
+            };
+
+            // Play/Pause button for video background      
+            const btn = $("#tm-video-control-button");
+
+            btn.on("click", function (e) {
+                const video = document.getElementById("tm-video");
+                $(this).removeClass();
+
+                if (video.paused) {
+                    video.play();
+                    $(this).addClass("fas fa-pause");
+                } else {
+                    video.pause();
+                    $(this).addClass("fas fa-play");
+                }
+            });
+        })
     </script>
 </body>
 </html>
