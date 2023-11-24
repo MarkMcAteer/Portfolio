@@ -65,49 +65,52 @@ https://templatemo.com/tm-552-video-catalog
 								<h1 class="mb-5 tm-video-title"> Sort Algorithms  </h1>
 							
 							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h2>
-								<p class="mb-4"> A project from my Computer Systems and C Programming course in which I designed
-									a bloom filter using Abstract Data Types to filter text for banned words and replace that text with safe words.
-									The assignment was presented, in terms of the firewall filter, with a theme of 1984 by George Orwell. This program
-									was completed in the C programming language in a Linux Virtual Machine. </p> 
+								<p class="mb-4"> In this assignment we were tasked with creating 4 different sorting algorithms and a dynamically
+									allocated array of pseudo randomly generated numbers to test each with. </p> 
 
 								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
-								<p class="mb-4"> In this program, a file containing words is inputted through stdin. The file contains any
-									number of words which will be scanned to determine if they are badspeak or oldspeak.
-									Badspeak is defined as words that are not allowed, and will result in the user being told not to
-									use them. Oldspeak words are also not allowed, but have a translation to a newspeak word. The
-									program uses a bloom filter with an underlying bit vector to determine if a word scanned is most
-									likely badspeak or oldspeak. In the case of which a word is most likely in the bloom filter, the hash table is
-									then searched to ensure that the result is correct. The hash table uses an array of binary search
-									trees to store each word in the node abstract data type.   </p> 
+								<p class="mb-4"> In this program, I wrote four sorting algorithms.  </p> 
 
-								<h5> Node </h5>
-								<p class="mb-4"> The node will be used in the binary search tree. It holds values left and right for its children as well as
-									character pointers to oldspeak and the translation to newspeak.  </p> 
+								<h5> Insert Sort </h5>
+								<p class="mb-4"> Insertion sort compares each element of the array to the preceding element counting down from
+									the length until 0. It simply checks whether the element is in the right place by checking the
+									element preceding it in the array. </p> 
 
-								<h5> Binary Search Tree </h5>
-								<p class="mb-4"> The binary tree contains nodes with values of the left being less than the root and values on the
-									right being greater than the root. The comparison values are obtained using strcmp() which
-									determines the position in the tree.  </p> 
+								<h5> Shell Sort </h5>
+								<p class="mb-4"> The shell sort algorithm uses the ideas of the gap sequence and the fact that any gap sequence
+									that ends with a gap of 1 has produced a sorted array. There are multiple different sequence
+									caps, but we are using Knuths, 𝑂(𝑛^3/2). A generator is also replicated in Shell by setting a static
+									variable equal to the max and creating a static variable called first run. first_run is false on start,
+									but once the function runs it's true for all remaining calls.  </p> 
 
-								<h5> Hash Table </h5>
-								<p class="mb-4"> The hash table contains a set number of bits of values determined by the hash function. In
-									comparison to the bloom filter, it contains less elements and is therefore less accurate. The
-									hash table contains a 128 bit salt represented by two uint64t’s, a size uint32t as well as a
-									pointer to a pointer to a Node of trees. The salt is used as a parameter for the hash function and
-									will therefore determine the position of the Node. </p> 
+								<h5> Heap Sort </h5>
+								<p class="mb-4"> Heap sort mimics data into a binary tree checking if any of the parents, or numbers above, are
+									greater. If they are, it switches and re-builds the heap. </p> 
 								
-								<h5> Bit Vector </h5>
-								<p class="mb-4"> The abstract data type that represents an array of binary bits whose size is determined by the length parameter. Edit
-									elements in the array using bitwise operators. To allow for efficient memory usage, use n/8
-									uint8ts in the array.  </p> 
+								<h5> Quick Sort </h5>
+								<p class="mb-4"> Quick sort uses a partition to split the array with a pivot. Elements less than the pivot go to a sub
+									array of numbers on the left and elements greater than the pivot go to a sub array on the right.
+									The quick sort function initializes a recursive function, quick_sorter, which continues to run until
+									the sort is complete.  </p> 
 
-								<h5> Bloom Filter </h5>
-								<p class="mb-4"> The bloom filter is created using the bit vector ADT along with the hash function to determine
-									which bit in the array to set. The hash function used in this implementation, speck cipher, was
-									created by the NSA and comes from the speck.h file. It is run through three different functions
-									for three total bit inserts. The bloom filter struct contains three 128 bit salts stored in two
-									uint64t’s as well as the bit vector storing the bits that have to be changed.  </p> 
-								
+								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Analysis </h2>
+								<p class="mb-4"> Graphing the elements run vs moves and comparisons gives a much clearer picture of
+									the efficiency in which these algorithms run. The moves and comparisons graphs on top,
+									representing a range of 100 elements, show a competitive change of rate between the sort
+									algorithms. At around 50 elements, insert beings to noticeably increase moves and
+									comparisons, much faster than the other three algorithms. In the middle moves and
+									comparisons graphs, with a range representing 1000, insert is clearly preformming many more
+									moves and comparisons. At this number of elements, heap also performs a noticeable amount
+									more moves and comparisons than insert and quick. On the last graph, with a range of 10000,
+									insert performs significantly worse than the other three algorithms.
+								</p> 
+
+								<p class="mb-4"> It’s clear from the graphs that insert runs much more moves and comparisons in order to
+									sort the elements. One reason for this is that insert sort has to check the element's validity one
+									by one for the length of the array. Insert works at a close rate as the other algorithms on small
+									numbers, but as the number of elements grows, its usefulness decreases.
+								</p> 
+
 								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
 								<p class="mb-4"> Firewall Cover Image: <a href="https://pixabay.com/illustrations/cyber-security-information-security-3400657/">https://pixabay.com/illustrations/cyber-security-information-security-3400657/</a> </p> 
 							
