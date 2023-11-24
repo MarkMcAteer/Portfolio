@@ -67,25 +67,26 @@ https://templatemo.com/tm-552-video-catalog
 							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h2>
 								<p class="mb-4"> A project from my Computer Systems and C Programming course in which I designed
 									a bloom filter using Abstract Data Types to filter text for banned words and replace that text with safe words.
-									The assignment was present, in terms of the firewall filter,  with a theme of 1984 by George Orwell. </p> 
+									The assignment was presented, in terms of the firewall filter, with a theme of 1984 by George Orwell. This program
+									was completed in the C programming language in a Linux Virtual Machine. </p> 
 
 								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
 								<p class="mb-4"> In this program, a file containing words is inputted through stdin. The file contains any
 									number of words which will be scanned to determine if they are badspeak or oldspeak.
-									Badspeak is defined as words that are not allowed and will result in the user being told not to
-									use them. Oldspeak words are also not allowed but have a translation to a newspeak word. The
+									Badspeak is defined as words that are not allowed, and will result in the user being told not to
+									use them. Oldspeak words are also not allowed, but have a translation to a newspeak word. The
 									program uses a bloom filter with an underlying bit vector to determine if a word scanned is most
-									likely badspeak or oldspeak. In the case that it is most likely in the bloom filter, the hash table is
+									likely badspeak or oldspeak. In the case of which a word is most likely in the bloom filter, the hash table is
 									then searched to ensure that the result is correct. The hash table uses an array of binary search
 									trees to store each word in the node abstract data type.   </p> 
 
 								<h5> Node </h5>
-								<p class="mb-4"> The node will be used in the binary tree. It holds values left and right for its children as well as
-									char pointer to oldspeak and the translation to newspeak.  </p> 
+								<p class="mb-4"> The node will be used in the binary search tree. It holds values left and right for its children as well as
+									character pointers to oldspeak and the translation to newspeak.  </p> 
 
 								<h5> Binary Search Tree </h5>
 								<p class="mb-4"> The binary tree contains nodes with values of the left being less than the root and values on the
-									right being greater than the loop. The comparison values are obtained using strcmp() which
+									right being greater than the root. The comparison values are obtained using strcmp() which
 									determines the position in the tree.  </p> 
 
 								<h5> Hash Table </h5>
@@ -96,7 +97,7 @@ https://templatemo.com/tm-552-video-catalog
 									will therefore determine the position of the Node. </p> 
 								
 								<h5> Bit Vector </h5>
-								<p class="mb-4"> ADT that represents an array of bits (1/0) whose size is determined by the length parameter. Edit
+								<p class="mb-4"> The abstract data type that represents an array of binary bits whose size is determined by the length parameter. Edit
 									elements in the array using bitwise operators. To allow for efficient memory usage, use n/8
 									uint8ts in the array.  </p> 
 
@@ -107,8 +108,6 @@ https://templatemo.com/tm-552-video-catalog
 									for three total bit inserts. The bloom filter struct contains three 128 bit salts stored in two
 									uint64t’s as well as the bit vector storing the bits that have to be changed.  </p> 
 								
-								
-
 								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
 								<p class="mb-4"> Firewall Cover Image: <a href="https://pixabay.com/illustrations/cyber-security-information-security-3400657/">https://pixabay.com/illustrations/cyber-security-information-security-3400657/</a> </p> 
 							
