@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McAteer Portfolio</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+</head>
+<!--
+TemplateMo 552 Video Catalog
+https://templatemo.com/tm-552-video-catalog
+-->
+<body>
+	<div class="tm-page-wrap mx-auto">
+		<div class="position-relative">
+			<div class="potition-absolute tm-site-header">
+				<div class="container-fluid position-relative">
+					<div class="row">
+                        <div class="col-5 col-md-8 ml-auto mr-0">
+                            <div class="tm-site-nav">
+                                <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                    <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
+                                        data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span>
+                                            <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                            <i class="fas fa-times tm-menu-opened-icon"></i>
+                                        </span>
+                                    </button>
+                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                        <ul class="navbar-nav text-uppercase">
+                                            <li class="nav-item active">
+                                                <a class="nav-link tm-nav-link" href="index.html">Projects<span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
+            </div>
+
+			<!-- Header image -->
+            <div id="tm-fixed-header-bg"></div>
+		</div>
+
+		<!-- Page content -->
+		<div class="container-fluid">
+			<div class="mx-auto tm-content-container">
+				<main>
+					<div class="row mb-5 pb-5">
+						<div class="col-12">
+							<!-- Video description
+							<div class="tm-video-description-box"> -->
+								<h1 class="mb-5 tm-video-title"> Sort Algorithms  </h1>
+							
+							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h2>
+								<p class="mb-4"> A project from my Computer Systems and C Programming course in which I designed
+									a bloom filter using Abstract Data Types to filter text for banned words and replace that text with safe words.
+									The assignment was presented, in terms of the firewall filter, with a theme of 1984 by George Orwell. This program
+									was completed in the C programming language in a Linux Virtual Machine. </p> 
+
+								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
+								<p class="mb-4"> In this program, a file containing words is inputted through stdin. The file contains any
+									number of words which will be scanned to determine if they are badspeak or oldspeak.
+									Badspeak is defined as words that are not allowed, and will result in the user being told not to
+									use them. Oldspeak words are also not allowed, but have a translation to a newspeak word. The
+									program uses a bloom filter with an underlying bit vector to determine if a word scanned is most
+									likely badspeak or oldspeak. In the case of which a word is most likely in the bloom filter, the hash table is
+									then searched to ensure that the result is correct. The hash table uses an array of binary search
+									trees to store each word in the node abstract data type.   </p> 
+
+								<h5> Node </h5>
+								<p class="mb-4"> The node will be used in the binary search tree. It holds values left and right for its children as well as
+									character pointers to oldspeak and the translation to newspeak.  </p> 
+
+								<h5> Binary Search Tree </h5>
+								<p class="mb-4"> The binary tree contains nodes with values of the left being less than the root and values on the
+									right being greater than the root. The comparison values are obtained using strcmp() which
+									determines the position in the tree.  </p> 
+
+								<h5> Hash Table </h5>
+								<p class="mb-4"> The hash table contains a set number of bits of values determined by the hash function. In
+									comparison to the bloom filter, it contains less elements and is therefore less accurate. The
+									hash table contains a 128 bit salt represented by two uint64t’s, a size uint32t as well as a
+									pointer to a pointer to a Node of trees. The salt is used as a parameter for the hash function and
+									will therefore determine the position of the Node. </p> 
+								
+								<h5> Bit Vector </h5>
+								<p class="mb-4"> The abstract data type that represents an array of binary bits whose size is determined by the length parameter. Edit
+									elements in the array using bitwise operators. To allow for efficient memory usage, use n/8
+									uint8ts in the array.  </p> 
+
+								<h5> Bloom Filter </h5>
+								<p class="mb-4"> The bloom filter is created using the bit vector ADT along with the hash function to determine
+									which bit in the array to set. The hash function used in this implementation, speck cipher, was
+									created by the NSA and comes from the speck.h file. It is run through three different functions
+									for three total bit inserts. The bloom filter struct contains three 128 bit salts stored in two
+									uint64t’s as well as the bit vector storing the bits that have to be changed.  </p> 
+								
+								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
+								<p class="mb-4"> Firewall Cover Image: <a href="https://pixabay.com/illustrations/cyber-security-information-security-3400657/">https://pixabay.com/illustrations/cyber-security-information-security-3400657/</a> </p> 
+							
+							<!--</div>-->
+						</div><!--
+						<div class="col-xl-4 col-lg-5">
+							<div class="tm-bg-gray tm-share-box">
+								<h6 class="tm-share-box-title mb-4">Share this video</h6>
+								<div class="mb-5 d-flex">
+									<a href="" class="tm-bg-white tm-share-button"><i class="fab fa-facebook"></i></a>
+									<a href="" class="tm-bg-white tm-share-button"><i class="fab fa-twitter"></i></a>
+									<a href="" class="tm-bg-white tm-share-button"><i class="fab fa-pinterest"></i></a>
+									<a href="" class="tm-bg-white tm-share-button"><i class="far fa-envelope"></i></a>
+								</div>
+								<p class="mb-4">Author: <a href="https://templatemo.com" class="tm-text-link">TemplateMo</a></p>
+								<a href="#" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
+									<i class="fas fa-heart mr-3 tm-liked-icon"></i>
+									<i class="far fa-heart mr-3 tm-not-liked-icon"></i>
+									<span id="tm-likes-count">486 likes</span>
+								</a>
+								<div>
+									<button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>
+								</div>
+							</div>
+						</div>-->
+					</div>
+				</main>
+			</div> <!-- .tm-content-container -->
+		</div>
+	</div>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$(document).ready(function() {
+    		$('.tm-likes-box').click(function(e) {
+    			e.preventDefault();
+    			$(this).toggleClass('tm-liked');
+
+    			if($(this).hasClass('tm-liked')) {
+    				$('#tm-likes-count').html('486 likes');
+    			} else {
+    				$('#tm-likes-count').html('485 likes');
+    			}
+    		});
+    	});
+    </script>
+</body>
+</html>
