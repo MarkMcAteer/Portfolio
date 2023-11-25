@@ -86,16 +86,17 @@ https://templatemo.com/tm-552-video-catalog
 									</div>
 								</div>
 								<h5> Overview </h5>
-								<p class="mb-4"> Part One of the project consisted of writing multiple search algorithms: Depth First Search, Breath First Search,
-								 Uniform Cost Search, A* search. The search algorithms are incorporated with the pacman code so that the pacman agent 
-								will traverse through each layout using the path provided by running the algorithm.   </p> 
+								<p class="mb-4"> Part One of the project consists of writing multiple search algorithms: Depth First Search, Breath First Search,
+								 Uniform Cost Search, and A* search. The search algorithms are incorporated with the pacman code so that the pacman agent 
+								will traverse through each layout using the path provided by running the algorithm.    </p> 
 
 								<h5> Algorithm Descriptions </h5>
-								<p class="mb-4"> Following the steps of other stock trading platforms such as Robinhood, I decided to use python for writing 
-									the backend code. This allowed for an easier creation of data structures and coding in general than what would 
-									have been my second choice, C++. To get my python code onto a website I decided to once again follow 
-									the steps of Robinhood and use Django. After learning the basics of Django, the transfer of the python 
-									code onto a website was a simple transition.  </p> 
+								<p class="mb-4"> The searches all follow the well known defintions of themselves. The depth search first expands the farthest node to the 
+									left and then goes up the tree. Breadth First Search first expands the closest nodes to the root and then starts expanding recursively 
+									down on the left most node. Uniform Cost Search is similar to the previous two searches descibed but now uses a priority queue. The prioirty 
+								of the queue is determined by which ever node has the minimum distance or cost. Finally, A* search will now consider the cost of reaching a node 
+								as well as the distance to the goal. The A* search function accepts a predefined heuristic function making it an informed search function. 
+							      </p> 
 
 									<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 2 </h2>
 									<div class="row mb-5 pb-4">
@@ -108,20 +109,18 @@ https://templatemo.com/tm-552-video-catalog
 										</div>
 									</div>
 									<h5> Overview </h5>
-									<p class="mb-4"> I created the Trade Simulator to practice my trading skills in a risk free environment. 
-										I began creating this by doing research on financial APIs and which ones had the best free tier. 
-										I originally used Alpha Vantage API but ran into some issues so I decided to go with the polygon.io API. 
-										This did include some limitations such as a max data history of 2 years as well as 5 API pulls per minute. 
-										One of the main problems I faced was that when a user interacted with the page, the data would be pulled from the API 
-										multiple times within one minute. This caused the page to crash, so I decided to cache the stock data and retrieve it 
-										from the cache when the page updated.  </p> 
+									<p class="mb-4"> Part Two of the assingment consists of writing a minimax search agent, a minimax search agent using alpha beta pruning,
+										and an expectimax agent. </p> 
 	
 									<h5> Algorithm Descriptions </h5>
-									<p class="mb-4"> Following the steps of other stock trading platforms such as Robinhood, I decided to use python for writing 
-										the backend code. This allowed for an easier creation of data structures and coding in general than what would 
-										have been my second choice, C++. To get my python code onto a website I decided to once again follow 
-										the steps of Robinhood and use Django. After learning the basics of Django, the transfer of the python 
-										code onto a website was a simple transition.  </p> 
+									<p class="mb-4"> The minimax search agent will recursively evaluate possible outcomes of different moves asuming that the agent 
+										is playing optimally. At each level of the tree, the maximizing player chooses the move with the highest score, while the minimzing 
+										player chooses the move with the lowest score. When alpha beta pruning is added, the agent can disgregard parts of the tree in scenarios 
+										of which there will be no better option in the child nodes. That part of the tree can then be removed, or pruned, which will improve the overall
+										efficeny of the search.  Expectimax is an extension of of the minimax algorithm where a chance node represents
+										the different possible outcomes of a probablistic event. The algorithm calculates the expected value at chance nodes by takign the average
+										of the possible outcomes, weighted by their probabliites. 
+									</p> 
 
 									<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 3 </h2>
 									<div class="row mb-5 pb-4">
@@ -134,20 +133,48 @@ https://templatemo.com/tm-552-video-catalog
 										</div>
 									</div>
 									<h5> Overview </h5>
-									<p class="mb-4"> I created the Trade Simulator to practice my trading skills in a risk free environment. 
-										I began creating this by doing research on financial APIs and which ones had the best free tier. 
-										I originally used Alpha Vantage API but ran into some issues so I decided to go with the polygon.io API. 
-										This did include some limitations such as a max data history of 2 years as well as 5 API pulls per minute. 
-										One of the main problems I faced was that when a user interacted with the page, the data would be pulled from the API 
-										multiple times within one minute. This caused the page to crash, so I decided to cache the stock data and retrieve it 
-										from the cache when the page updated.  </p> 
+									<p class="mb-4"> Part 3 of the project consisted of writing a value iteration function and a q-learning agent on a 
+										pacman grid. In Part 1 and Part 2, the pacman agent would go where it was told. Now, the agent has an 80% change of
+									going the way it is told and 10% chances of going left and right.   </p> 
 	
-									<h5> Algorithm Descriptions </h5>
-									<p class="mb-4"> Following the steps of other stock trading platforms such as Robinhood, I decided to use python for writing 
-										the backend code. This allowed for an easier creation of data structures and coding in general than what would 
-										have been my second choice, C++. To get my python code onto a website I decided to once again follow 
-										the steps of Robinhood and use Django. After learning the basics of Django, the transfer of the python 
-										code onto a website was a simple transition.  </p> 
+									<h5> Value Iteration </h5>
+									<p class="mb-4"> The value iteration function taken in a Markov Decision Process (MDP) on initialization, and runs a 
+										value iteration for a given number of iterations using a supplied discount factor. The value iteration function will supply
+										an optimal policy, or a solution that states waht an agetn must do for any state the agent might reach. The most important function
+										to complete the value iteration function in the getQValue() function. It will return the q value of a state action pair which is a 
+										utility value or the expected utility of taking a given action in a given state. 
+									</p> 
+									<p class="mb-4"> To compute the Q-Value use the equation: ∑ P(s'|s, a)[R(s, a, s') + 𝛾U[s'] where: </p> 
+									<p class="mb-4"> P(s'|s, a) is the probability of reaching state s' if an action, a, is done in state s.</p> 
+									<p class="mb-4"> R(s, a, s') is the reward the agent recieves for every transition from s to s' for action, a. </p> 
+									<p class="mb-4"> 𝛾U[s'] is the  the discount factor multiplied by the value/utility of the transition state.</p> 
+									<h5> Q-Learning Agent </h5>
+									<p class="mb-4"> The algorithm maintains a Q-value for each state-action pair, representing the expected cumulative reward 
+										of taking a specific action in a given state and following the optimal policy thereafter. Through exploration of the
+										 environment, the agent updates its Q-values based on the observed rewards and refines its policy over time. 
+										 </p> 
+									<p class="mb-4"> To compute the Q-Value in the update function use the equation: Q(s, a) <- (1 - α)Q(s, a) + (α)[R(s, a, s') + 𝛾maxQ(s', a')] where: </p> 
+									<p class="mb-4"> 𝛾 is the discount rate</p> 
+									<p class="mb-4"> α is the alpha </p> 
+									<p class="mb-4"> s is the current state</p> 
+									<p class="mb-4"> s' is the next state</p> 
+									<p class="mb-4"> a is the current action</p> 
+									
+										<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 4 </h2>
+										<div class="row mb-5 pb-4">
+											<div class="col-12">
+												<!-- Video player 1422x800 -->
+												<video width="1422" height="800" controls autoplay>
+												  <source src="video/P3.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+												</video>
+											</div>
+										</div>
+										<h5> Overview </h5>
+										<p class="mb-4"> In progress... (11/24/23)</p> 
+		
+										<h5> Algorithm Descriptions </h5>
+										<p class="mb-4"> In progress... (11/24/23)</p> 
 
 								<h5> Libraries </h5>
 								<p class="mb-4"> Libraries that I used for the project included Pickle for storing username and password information,
