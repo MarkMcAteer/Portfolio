@@ -62,58 +62,45 @@ https://templatemo.com/tm-552-video-catalog
 						<div class="col-12">
 							<!-- Video description
 							<div class="tm-video-description-box"> -->
-								<h1 class="mb-5 tm-video-title"> Firewall  </h1>
+								<h1 class="mb-5 tm-video-title"> Facial Recognition: Tic-tac-toe  </h1>
 
 								<p style="color: red;">Per the rules of the University of California, Santa Cruz, the source code for this project can not be 
 									shared publicy. To view the source code please send me an email, which can be found in the contact section of the website, and 
 									state a reason for requesting source code.</p>
 							
 							    <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h2>
-								<p class="mb-4"> A project from my Computer Systems and C Programming course in which I designed
-									a bloom filter using Abstract Data Types to filter text for banned words and replace that text with safe words.
-									The assignment was presented, in terms of the firewall filter, with a theme of 1984 by George Orwell. This program
-									was completed in the C programming language in a Linux Virtual Machine. </p> 
+								<p class="mb-4"> In this project, I explored the innovative application of deep learning to create a novel game controller 
+									by recognizing facial expressions and using them as inputs for gameplay. My collaborator, David Amaya, and I 
+									completed this project in 2 weeks for a Game AI course at UC, Santa Cruz.
 
-								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Overview </h2>
-								<p class="mb-4"> In this program, the name of a txt file is inputted through stdin after running make. The file contains any
-									number of words which will be scanned to determine if they are badspeak or oldspeak.
-									Badspeak is defined as words that are not allowed, and will result in the user being told not to
-									use them. Oldspeak words are also not allowed, but have a translation to a newspeak word. The
-									program uses a bloom filter with an underlying bit vector to determine if a word scanned is most
-									likely badspeak or oldspeak. In the case of which a word is most likely in the bloom filter, the hash table is
-									then searched to ensure that the result is correct. The hash table uses an array of binary search
-									trees to store each word in the node abstract data type.   </p> 
+ </p> 
 
-								<h5> Node </h5>
-								<p class="mb-4"> The node, and abstract data type, will be used in the binary search tree. It holds values, left and right, for its children as well as
-									character pointers to oldspeak and the translation to newspeak.  </p> 
+								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Analysis </h2>
 
-								<h5> Binary Search Tree </h5>
-								<p class="mb-4"> The binary tree contains nodes with values of the left being less than the root and values on the
-									right being greater than the root. The comparison values are obtained using strcmp() which
-									determines the position in the tree.  </p> 
+								<h5> Initial Model Development </h5>
+								<p class="mb-4">  We utilized Keras and TensorFlow to build a classifier capable of distinguishing between neutral, happy, and surprised facial expressions.
+									The initial model, trained with a dataset provided by Kaggle, incorporated convolutional and max pooling layers, fully connected 
+									layers, and a softmax activation function. </p> 
 
-								<h5> Hash Table </h5>
-								<p class="mb-4"> The hash table contains a set number of bits of values determined by the hash function. In
-									comparison to the bloom filter, it contains less elements and is therefore less accurate. The
-									hash table contains a 128 bit salt represented by two uint64t’s, a size uint32t as well as a
-									pointer to a pointer to a Node of trees. The salt is used as a parameter for the hash function and
-									will therefore determine the position of the Node. </p> 
+								<h5> Model Training and Optimization </h5>
+								<p class="mb-4"> Throughout the training process, we monitored accuracy and loss metrics to refine the model and prevent overfitting.
+								The successfully optimized model demonstrated by our enhanced version achieved improved validation performance. </p> 
+
+								<h5> Gameplay Integration </h5>
+								<p class="mb-4"> Using the trained model, we developed a gameplay interface that leveraged facial expressions to dictate moves in a tic-tac-toe game.
+								Despite challenges with real-world accuracy, the project provided valuable insights into the model's responsiveness and potential improvements. </p> 
 								
-								<h5> Bit Vector </h5>
-								<p class="mb-4"> The abstract data type that represents an array of binary bits whose size is determined by the length parameter. Edit
-									elements in the array using bitwise operators. To allow for efficient memory usage, use n/8
-									uint8ts in the array.  </p> 
+								<h5> Transfer Learning </h5>
+								<p class="mb-4"> We explored transfer learning by adapting the facial recognition model to classify between two completely different categories, 
+									demonstrating the model's adaptability and broad applicability.  </p> 
 
-								<h5> Bloom Filter </h5>
-								<p class="mb-4"> The bloom filter is created using the bit vector ADT along with the hash function to determine
-									which bit in the array to set. The hash function used in this implementation, speck cipher, was
-									created by the NSA and comes from the speck.h file. It is run through three different functions
-									for three total bit inserts. The bloom filter struct contains three 128 bit salts stored in two
-									uint64t’s as well as the bit vector storing the bits that have to be changed.  </p> 
+								<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Conclusion </h2>
+								<p class="mb-4"> This project highlights the practical use of deep learning in creating interactive game interfaces and sets the stage for further 
+									exploration into innovative user-interface technologies. Through ongoing refinement, we enhanced the accuracy and effectiveness of our models, 
+									further exploring the practical applications and interconnections of deep learning and gaming.  </p> 
 								
 								<h5 class="tm-text-primary mb-3 tm-catalog-item-title"> Sources </h2>
-								<p class="mb-4"> Firewall Cover Image: <a href="https://pixabay.com/illustrations/cyber-security-information-security-3400657/">https://pixabay.com/illustrations/cyber-security-information-security-3400657/</a> </p> 
+								<p class="mb-4"> Cover Image: <a href="https://www.g2.com/articles/facial-recognition">https://www.g2.com/articles/facial-recognition</a> </p> 
 							
 							<!--</div>-->
 						</div><!--
