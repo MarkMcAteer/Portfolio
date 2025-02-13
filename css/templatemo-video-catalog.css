@@ -49,29 +49,6 @@ h2, p { color: #666666; }
     text-align: center;
 }
 
-/* Container for the images */
-.image-container {
-    display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    gap: 20px; /* Space between the images */
-    padding: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-/* Link around the images */
-.image-link {
-    display: block;
-    width: 100%;
-    max-width: 300px; /* Sets a max-width for the images */
-}
-
-/* Placeholder images */
-.image-placeholder {
-    width: 100%;
-    height: auto; /* Makes the height auto-adjust based on the width */
-    object-fit: cover; /* Ensures the image fills the space without distortion */
-}
-
 .tm-site-logo { font-size: 3rem; }
 .tm-site-name { font-size: 1.9rem; }
 
