@@ -67,18 +67,11 @@ https://templatemo.com/tm-552-video-catalog
                         <div class="tm-video-description-box"> -->
 						<h1 class="mb-5 tm-video-title"> Berkeley AI: Pacman  </h1>
 
-						<p style="color: red;">Per the rules of the University of California, Santa Cruz, the source code for this project can not be
-							shared publicy. To view the source code please send me an email, which can be found in the contact section of the website, and
-							state a reason for requesting source code.</p>
-
-						<p class="mb-4"> <a href="http://ai.berkeley.edu/project_overview.html">[Original Assignment]</a> </p>
-
 						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Introduction </h2>
-						<p class="mb-4"> The Berkeley AI Pacman project is a course long project used at many universities across the globe.
-							In the course I took at UCSC, CSE140: Artifical Intelligence, my professor broke the assignemnt into four parts. The first
-							three parts consisted of individual work while the final part consisted of teamwork in a group of four. 	 </p>
+						<p class="mb-4"> Archipelago is a fast paced movement roguelike set on a cluster of floating islands. It was created
+						in a team of 5 where my role was working on combat programming, enemy AI, and game mechanics such as inventory and health systems. </p>
 
-						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 1 </h2>
+						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat </h2>
 						<div class="row mb-5 pb-4">
 							<div class="col-12">
 								<!-- Video player 1422x800 -->
@@ -89,9 +82,21 @@ https://templatemo.com/tm-552-video-catalog
 							</div>
 						</div>
 						<h5> Overview </h5>
-						<p class="mb-4"> Part One of the project consists of writing multiple search algorithms: Depth First Search, Breath First Search,
-							Uniform Cost Search, and A* search. The search algorithms are incorporated with the pacman code so that the pacman agent
-							will traverse through each layout using the path provided by running the algorithm.    </p>
+						<p class="mb-4"> The first step I took in creating the melee combat system was an making Input Action for the sword swing that activates the attack animation
+						montage. Then I created an IsAttacking variable to ensure the player cannot keep resetting the attack animation once the montage has finished. 
+						</p>
+
+						<p class="mb-4"> The next part of combat was to add a combo attack so I created an attack count variable to check which step of the combo attack the 
+							player is at. If the player stops attacking the attack count would reset to restart the combo on the next attack step. 
+						</p>
+
+						<p class="mb-4"> Then I added anim notifys to each animation montage at the point at which the player has finished each part of a combo attack and can move to 
+							the next combo montage animation. 
+						</p>
+
+						<p class="mb-4"> The final part of the first step in the combat system was to add an OnSphereOverlap tracking the ik_hand_r bone which destroys 
+							a set actor variable on overlap.
+						</p>
 
 						<h5> Algorithm Descriptions </h5>
 						<p class="mb-4"> The searches all follow the well known defintions of themselves. The depth search first expands the farthest node to the
