@@ -417,13 +417,12 @@ video {
 .tm-project-info li strong {
     font-weight: bold;
     min-width: 120px; /* Ensures all keys align */
-    color: #ffffff; /* Adjust this if needed */
+    color: #000000; /* Adjust this if needed */
 }
 
 .tm-project-info li span {
     font-weight: normal;
 }
-
 
 /* Contact */
 .mapouter{
