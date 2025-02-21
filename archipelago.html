@@ -117,67 +117,41 @@ https://templatemo.com/tm-552-video-catalog
 							a set actor variable on overlap.
 						</p>
 
-						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 2 </h2>
 						<div class="row mb-5 pb-4">
-							<div class="col-12">
-								<!-- Video player 1422x800 -->
-								<video width="1422" height="800" controls autoplay>
-									<source src="video/P2.mp4" type="video/mp4">
+							<!-- First Video -->
+							<div class="col-md-6 text-center">
+								<video width="400" height="225" autoplay loop muted playsinline>
+									<source src="video/Arch_Combat3.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+
+							<!-- Second Video -->
+							<div class="col-md-6 text-center">
+								<video width="400" height="225" autoplay loop muted playsinline>
+									<source src="video/Arch_Combat3.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
 							</div>
 						</div>
 						<h5> Overview </h5>
-						<p class="mb-4"> Part Two of the assingment consists of writing a minimax search agent, a minimax search agent using alpha beta pruning,
-							and an expectimax agent. </p>
-
-						<h5> Algorithm Descriptions </h5>
-						<p class="mb-4"> The minimax search agent will recursively evaluate possible outcomes of different moves asuming that the agent
-							is playing optimally. At each level of the tree, the maximizing player chooses the move with the highest score, while the minimzing
-							player chooses the move with the lowest score. When alpha beta pruning is added, the agent can disgregard parts of the tree in scenarios
-							of which there will be no better option in the child nodes. That part of the tree can then be removed, or pruned, which will improve the overall
-							efficeny of the search.  Expectimax is an extension of of the minimax algorithm where a chance node represents
-							the different possible outcomes of a probablistic event. The algorithm calculates the expected value at chance nodes by takign the average
-							of the possible outcomes, weighted by their probabliites.
+						<p class="mb-4"> The first step I took in creating the melee combat system was an making Input Action for the sword swing that activates the attack animation
+							montage. Then I created an IsAttacking variable to ensure the player cannot keep resetting the attack animation once the montage has finished.
 						</p>
 
-						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Part 3 </h2>
-						<div class="row mb-5 pb-4">
-							<div class="col-12">
-								<!-- Video player 1422x800 -->
-								<video width="1422" height="800" controls autoplay>
-									<source src="video/P3.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div>
-						</div>
-						<h5> Overview </h5>
-						<p class="mb-4"> Part 3 of the project consisted of writing a value iteration function and a q-learning agent on a
-							pacman grid. In Part 1 and Part 2, the pacman agent would go where it was told. Now, the agent has an 80% change of
-							going the way it is told and 10% chances of going left and right.   </p>
+						<p class="mb-4"> The next part of combat was to add a combo attack so I created an attack count variable to check which step of the combo attack the
+							player is at. If the player stops attacking the attack count would reset to restart the combo on the next attack step.
+						</p>
 
-						<h5> Value Iteration </h5>
-						<p class="mb-4"> The value iteration function taken in a Markov Decision Process (MDP) on initialization, and runs a
-							value iteration for a given number of iterations using a supplied discount factor. The value iteration function will supply
-							an optimal policy, or a solution that states waht an agetn must do for any state the agent might reach. The most important function
-							to complete the value iteration function in the getQValue() function. It will return the q value of a state action pair which is a
-							utility value or the expected utility of taking a given action in a given state.
+						<p class="mb-4"> Then I added anim notifys to each animation montage at the point at which the player has finished each part of a combo attack and can move to
+							the next combo montage animation.
 						</p>
-						<p class="mb-4"> To compute the Q-Value use the equation: ∑ P(s'|s, a)[R(s, a, s') + 𝛾U[s'] where: </p>
-						<p class="mb-4"> P(s'|s, a) is the probability of reaching state s' if an action, a, is done in state s.</p>
-						<p class="mb-4"> R(s, a, s') is the reward the agent recieves for every transition from s to s' for action, a. </p>
-						<p class="mb-4"> 𝛾U[s'] is the  the discount factor multiplied by the value/utility of the transition state.</p>
-						<h5> Q-Learning Agent </h5>
-						<p class="mb-4"> The algorithm maintains a Q-value for each state-action pair, representing the expected cumulative reward
-							of taking a specific action in a given state and following the optimal policy thereafter. Through exploration of the
-							environment, the agent updates its Q-values based on the observed rewards and refines its policy over time.
+
+						<p class="mb-4"> The final part of the first step in the combat system was to add an OnSphereOverlap tracking the ik_hand_r bone which destroys
+							a set actor variable on overlap.
 						</p>
-						<p class="mb-4"> To compute the Q-Value in the update function use the equation: Q(s, a) <- (1 - α)Q(s, a) + (α)[R(s, a, s') + 𝛾maxQ(s', a')] where: </p>
-						<p class="mb-4"> 𝛾 is the discount rate</p>
-						<p class="mb-4"> α is the alpha </p>
-						<p class="mb-4"> s is the current state</p>
-						<p class="mb-4"> s' is the next state</p>
-						<p class="mb-4"> a is the current action</p>
+						
+						
 					</div>
 				</div>
 			</main>
