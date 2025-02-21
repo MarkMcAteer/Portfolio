@@ -87,6 +87,8 @@ https://templatemo.com/tm-552-video-catalog
 								</p>
 							</div>
 						</div>
+						
+						<p><br><br></p>
 
 						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat</h2>
 						<div class="row mb-5 pb-4">
@@ -106,7 +108,6 @@ https://templatemo.com/tm-552-video-catalog
 						        </video>
 						    </div>
 						</div>
-						<h5> Overview </h5>
 						<p class="mb-4"> The first step I took towards building the combat system in Archipelago was creating a sphere overlap on 
 							the player's right hand bone. This setup destroys a mannequin if it overlaps with the actor.
 						</p>
@@ -163,7 +164,7 @@ https://templatemo.com/tm-552-video-catalog
 							<!-- First Video -->
 							<div class="col-md-6 text-center">
 								<video width="400" height="225" autoplay loop muted playsinline>
-									<source src="video/Arch_Combat1.mp4" type="video/mp4">
+									<source src="video/Arch_Dash1.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
 							</div>
@@ -171,16 +172,25 @@ https://templatemo.com/tm-552-video-catalog
 							<!-- Second Video -->
 							<div class="col-md-6 text-center">
 								<video width="400" height="225" autoplay loop muted playsinline>
-									<source src="video/Arch_Combat2.mp4" type="video/mp4">
+									<source src="video/Arch_Dash1.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
 							</div>
 						</div>
-						<p class="mb-4"> Another important aspect of the game was 
+						<p class="mb-4"> A key gameplay mechanic in Archipelago is the player's ability to navigate through the floating islands. 
+							To enhance this we came up with the idea of a dash ability where pressing the RMB propels the player forward.
 						</p>
 
-						<p class="mb-4"> The final part of the first step in the combat system was to add an OnSphereOverlap tracking the ik_hand_r bone which destroys
-							a set actor variable on overlap.
+						<p class="mb-4"> The player has access to three dashes, which reset upon landing or when they collide with an orb. 
+							These orbs, floating spheres scattered between the islands, trigger time dilation when the player dashes into them, allowing them a brief moment to aim their next dash.
+						</p>
+
+						<p class="mb-4"> The dash functionality was implemented by modifying the jump mechanic and adjusting its values. 
+							Instead of the traditional up-and-down motion, the dash propels the player forward by a fixed distance.
+						</p>
+
+						<p class="mb-4"> The orbs themselves are pawns with collision spheres, and when the player intersects with them, 
+							time dilation activates for a few seconds, giving the player time to strategize their next move.
 							<br> <br>
 						</p>
 
