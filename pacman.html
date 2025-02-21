@@ -82,7 +82,7 @@ https://templatemo.com/tm-552-video-catalog
 								<div class="row mb-5 pb-4">
 									<div class="col-12">
 										<!-- Video player 1422x800 -->
-										<video width="1422" height="800" controls autoplay>
+										<video width="1422" height="800"  autoplay loop muted playsinline>
 										  <source src="video/P1.mp4" type="video/mp4">
 										Your browser does not support the video tag.
 										</video>
@@ -105,7 +105,7 @@ https://templatemo.com/tm-552-video-catalog
 									<div class="row mb-5 pb-4">
 										<div class="col-12">
 											<!-- Video player 1422x800 -->
-											<video width="1422" height="800" controls autoplay>
+											<video width="1422" height="800"  autoplay loop muted playsinline>
 											  <source src="video/P2.mp4" type="video/mp4">
 											Your browser does not support the video tag.
 											</video>
@@ -129,7 +129,7 @@ https://templatemo.com/tm-552-video-catalog
 									<div class="row mb-5 pb-4">
 										<div class="col-12">
 											<!-- Video player 1422x800 -->
-											<video width="1422" height="800" controls autoplay>
+											<video width="1422" height="800"  autoplay loop muted playsinline>
 											  <source src="video/P3.mp4" type="video/mp4">
 											Your browser does not support the video tag.
 											</video>
@@ -143,14 +143,14 @@ https://templatemo.com/tm-552-video-catalog
 									<h5> Value Iteration </h5>
 									<p class="mb-4"> The value iteration function taken in a Markov Decision Process (MDP) on initialization, and runs a 
 										value iteration for a given number of iterations using a supplied discount factor. The value iteration function will supply
-										an optimal policy, or a solution that states waht an agetn must do for any state the agent might reach. The most important function
+										an optimal policy, or a solution that states what an agent must do for any state the agent might reach. The most important function
 										to complete the value iteration function in the getQValue() function. It will return the q value of a state action pair which is a 
 										utility value or the expected utility of taking a given action in a given state. 
 									</p> 
 									<p class="mb-4"> To compute the Q-Value use the equation: ∑ P(s'|s, a)[R(s, a, s') + 𝛾U[s'] where: </p> 
 									<p class="mb-4"> P(s'|s, a) is the probability of reaching state s' if an action, a, is done in state s.</p> 
-									<p class="mb-4"> R(s, a, s') is the reward the agent recieves for every transition from s to s' for action, a. </p> 
-									<p class="mb-4"> 𝛾U[s'] is the  the discount factor multiplied by the value/utility of the transition state.</p> 
+									<p class="mb-4"> R(s, a, s') is the reward the agent receives for every transition from s to s' for action, a. </p> 
+									<p class="mb-4"> 𝛾U[s'] is the  discount factor multiplied by the value/utility of the transition state.</p> 
 									<h5> Q-Learning Agent </h5>
 									<p class="mb-4"> The algorithm maintains a Q-value for each state-action pair, representing the expected cumulative reward 
 										of taking a specific action in a given state and following the optimal policy thereafter. Through exploration of the
