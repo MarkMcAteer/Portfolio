@@ -407,7 +407,7 @@ video {
 .tm-project-info {
     flex: 1; /* Takes up 25% of the space */
     max-width: 25%;
-    margin-right: 20%;
+    margin-right: 10%;
 }
 
 .tm-about {
@@ -422,6 +422,7 @@ video {
 
 .tm-project-info li {
     display: flex;
+    gap: 2px;
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
