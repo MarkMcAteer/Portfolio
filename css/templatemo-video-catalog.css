@@ -425,6 +425,7 @@ video {
     gap: 2px;
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
 }
 
 .tm-project-info li:last-child {
@@ -434,11 +435,14 @@ video {
 .tm-project-info li strong {
     font-weight: bold;
     min-width: 120px; /* Ensures all keys align */
-    color: inherit; /* Matches text color */
+    color: inherit;
+    margin-right: 0; /* No margin to the right */
+    white-space: nowrap; /* Prevents wrapping of the key text */
 }
 
 .tm-project-info li span {
     font-weight: normal;
+    white-space: nowrap;
 }
 
 
