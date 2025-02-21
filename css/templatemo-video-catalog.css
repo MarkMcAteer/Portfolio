@@ -435,7 +435,7 @@ video {
 .tm-project-info li strong {
     font-weight: bold;
     color: inherit;
-    margin-right: 10px; /* No margin to the right */
+    margin-right: 2px; /* No margin to the right */
     white-space: nowrap; /* Prevents wrapping of the key text */
 }
 
