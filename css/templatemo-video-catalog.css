@@ -398,13 +398,30 @@ video {
     color: #999;
 }
 
+.tm-project-container {
+    display: flex; /* Enables side-by-side layout */
+    gap: 20px; /* Adds space between sections */
+    align-items: flex-start; /* Aligns content at the top */
+}
+
 .tm-project-info {
+    flex: 1; /* Takes up 25% of the space */
+    max-width: 25%;
+}
+
+.tm-about {
+    flex: 3; /* Takes up 75% of the space */
+    max-width: 75%;
+}
+
+.tm-project-info ul {
     list-style: none;
     padding: 0;
 }
 
 .tm-project-info li {
-    display: flex; /* Aligns key and value in a row */
+    display: flex;
+    gap: 10px;
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -416,12 +433,13 @@ video {
 .tm-project-info li strong {
     font-weight: bold;
     min-width: 120px; /* Ensures all keys align */
-    color: #000000; /* Adjust this if needed */
+    color: inherit; /* Matches text color */
 }
 
 .tm-project-info li span {
     font-weight: normal;
 }
+
 
 /* Contact */
 .mapouter{
