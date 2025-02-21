@@ -405,7 +405,6 @@ video {
 
 .tm-project-info li {
     display: flex; /* Aligns key and value in a row */
-    gap: 10px; /* Adds spacing between key and value */
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
