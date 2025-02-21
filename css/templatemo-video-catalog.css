@@ -398,6 +398,18 @@ video {
     color: #999;
 }
 
+.tm-project-info {
+    list-style: none;
+    padding: 0;
+}
+.tm-project-info li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tm-project-info li:last-child {
+    border-bottom: none;
+}
+
 /* Contact */
 .mapouter{
     position:relative;
