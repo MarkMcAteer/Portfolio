@@ -422,7 +422,7 @@ video {
 
 .tm-project-info li {
     display: flex;
-    gap: 2px;
+    gap: 10px;
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     white-space: nowrap;
@@ -434,9 +434,8 @@ video {
 
 .tm-project-info li strong {
     font-weight: bold;
-    min-width: 120px; /* Ensures all keys align */
     color: inherit;
-    margin-right: 0; /* No margin to the right */
+    margin-right: 10px; /* No margin to the right */
     white-space: nowrap; /* Prevents wrapping of the key text */
 }
 
@@ -444,7 +443,6 @@ video {
     font-weight: normal;
     white-space: nowrap;
 }
-
 
 /* Contact */
 .mapouter{
