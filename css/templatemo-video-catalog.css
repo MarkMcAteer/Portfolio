@@ -407,7 +407,7 @@ video {
 .tm-project-info {
     flex: 1; /* Takes up 25% of the space */
     max-width: 25%;
-    margin-right: 10%;
+    margin-right: 7%;
 }
 
 .tm-about {
@@ -435,7 +435,7 @@ video {
 .tm-project-info li strong {
     font-weight: bold;
     color: inherit;
-    margin-right: 2px; /* No margin to the right */
+    /* margin-right: 0px; No margin to the right */
     white-space: nowrap; /* Prevents wrapping of the key text */
 }
 

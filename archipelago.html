@@ -107,20 +107,24 @@ https://templatemo.com/tm-552-video-catalog
 						    </div>
 						</div>
 						<h5> Overview </h5>
-						<p class="mb-4"> The first step I took in creating the melee combat system was an making Input Action for the sword swing that activates the attack animation
-						montage. Then I created an IsAttacking variable to ensure the player cannot keep resetting the attack animation once the montage has finished. 
+						<p class="mb-4"> The first step I took towards building the combat system in Archipelago was creating a sphere overlap on 
+							the player's right hand bone. This setup destroys a mannequin if it overlaps with the actor.
 						</p>
 
-						<p class="mb-4"> The next part of combat was to add a combo attack so I created an attack count variable to check which step of the combo attack the 
-							player is at. If the player stops attacking the attack count would reset to restart the combo on the next attack step. 
+						<p class="mb-4"> I worked on making the sword swing functional by creating an Input Action for the attack. This triggers the 
+							attack animation montage, and to ensure the animation isn’t interrupted by spam clicking, I created an IsAttacking variable.
 						</p>
 
-						<p class="mb-4"> Then I added anim notifys to each animation montage at the point at which the player has finished each part of a combo attack and can move to 
-							the next combo montage animation. 
+						<p class="mb-4"> To add depth to the combat, I developed a combo attack system. I created an attack count variable to 
+							track which step of the combo the player is on. If the player stops attacking, the attack count resets, forcing them to restart the combo on the next attack.
 						</p>
 
-						<p class="mb-4"> The final part of the first step in the combat system was to add an OnSphereOverlap tracking the ik_hand_r bone which destroys 
-							a set actor variable on overlap.
+						<p class="mb-4"> I added anim notifies to the animation montages at each part of the combo, so the system would track when 
+							a player completes a combo step and move to the next montage animation.
+						</p>
+
+						<p class="mb-4"> For the right-hand bone tracking, I added an OnSphereOverlap function that tracks the IK hand bone.
+							If the sphere overlaps with an actor, a mannequin or set actor variable is destroyed.
 							<br> <br> 
 						</p>
 
@@ -141,21 +145,17 @@ https://templatemo.com/tm-552-video-catalog
 								</video>
 							</div>
 						</div>
-						<h5> Overview </h5>
-						<p class="mb-4"> The first step I took in creating the melee combat system was an making Input Action for the sword swing that activates the attack animation
-							montage. Then I created an IsAttacking variable to ensure the player cannot keep resetting the attack animation once the montage has finished.
+						<p class="mb-4"> I also worked on integrating death animations. When the character’s health runs out, I ensured a death 
+							animation plays, and I added a delay to allow the animation to finish before the actor is destroyed.
 						</p>
 
-						<p class="mb-4"> The next part of combat was to add a combo attack so I created an attack count variable to check which step of the combo attack the
-							player is at. If the player stops attacking the attack count would reset to restart the combo on the next attack step.
+						<p class="mb-4"> The death system checks if the character is already dead to prevent the animation from playing repeatedly 
+							when hit again. It’s also designed to keep the character dead on the ground for a while before removing them from the game world.
 						</p>
 
-						<p class="mb-4"> Then I added anim notifys to each animation montage at the point at which the player has finished each part of a combo attack and can move to
-							the next combo montage animation.
-						</p>
-
-						<p class="mb-4"> The final part of the first step in the combat system was to add an OnSphereOverlap tracking the ik_hand_r bone which destroys
-							a set actor variable on overlap.
+						<p class="mb-4"> Overall, I’ve implemented a combo-based melee combat system with attack sequences, death animations, 
+							and appropriate checks to make sure everything works smoothly without interruptions.
+							<br> <br>
 						</p>
 
 						<h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Dash and Time Dilation </h2>
@@ -176,7 +176,6 @@ https://templatemo.com/tm-552-video-catalog
 								</video>
 							</div>
 						</div>
-						<h5> Overview </h5>
 						<p class="mb-4"> Another important aspect of the game was 
 						</p>
 
