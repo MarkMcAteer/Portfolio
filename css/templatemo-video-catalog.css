@@ -402,13 +402,28 @@ video {
     list-style: none;
     padding: 0;
 }
+
 .tm-project-info li {
+    display: flex; /* Aligns key and value in a row */
+    gap: 10px; /* Adds spacing between key and value */
     padding: 5px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .tm-project-info li:last-child {
     border-bottom: none;
 }
+
+.tm-project-info li strong {
+    font-weight: bold;
+    min-width: 120px; /* Ensures all keys align */
+    color: #ffffff; /* Adjust this if needed */
+}
+
+.tm-project-info li span {
+    font-weight: normal;
+}
+
 
 /* Contact */
 .mapouter{
