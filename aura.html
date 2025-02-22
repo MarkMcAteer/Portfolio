@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--This is a comment. Comments are not displayed in the browser Add to commet.-->
     <title>McAteer Portfolio</title>
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -19,7 +17,7 @@ https://templatemo.com/tm-552-video-catalog
 <body>
 <div class="tm-page-wrap mx-auto">
     <div class="position-relative">
-        <div class="potition-absolute tm-site-header">
+        <div class="position-absolute tm-site-header">
             <div class="container-fluid position-relative">
                 <div class="row">
                     <div class="col-5 col-md-8 ml-auto mr-0">
@@ -63,49 +61,157 @@ https://templatemo.com/tm-552-video-catalog
     <div class="container-fluid">
         <div class="mx-auto tm-content-container">
             <main>
-                <div class="row mb-5 pb-4">
-                    <div class="col-12">
-                        <!-- Video player 1422x800 -->
-                        <video width="1422" height="800" controls autoplay>
-                            <source src="video/evocation.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
                 <div class="row mb-5 pb-5">
                     <div class="col-12">
                         <!-- Video description
                         <div class="tm-video-description-box"> -->
-                        <h2 class="mb-5 tm-video-title"> Evocation </h2>
-                        <p class="mb-4"> This game was created for a project in my ARTG120 class at UCSC. I worked on it in a group of 5. My responsibilites included
-                            handling audio, scene management, UI design, and partial world creation. You can play the game on itch.io using the link below:
+                        <h1 class="mb-5 tm-video-title text-center"> Aura </h1>
 
-                        <p class="mb-4"> <a href="https://anthony-molle.itch.io/evocation">[Click here to play.]</a> </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <video width="880" height="520" autoplay loop muted playsinline>
+                                    <source src="video/ArchipelagoDemo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <p><br><br></p>
+
+                        <div class="tm-project-container">
+                            <div class="tm-project-info">
+                                <h2 class="tm-text-primary tm-catalog-item-title">Project Info</h2>
+                                <ul>
+                                    <li><strong>Role:</strong> <span>Gameplay Programmer</span></li>
+                                    <li><strong>Team Size:</strong> <span>1</span></li>
+                                    <li><strong>Time Frame:</strong> <span>3 Months (Jan - March 2025)</span></li>
+                                    <li><strong>Engine:</strong> <span>Unreal Engine 5</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="tm-about">
+                                <h2 class="tm-text-primary tm-catalog-item-title">About</h2>
+                                <p>
+                                    Archipelago is a fast-paced, movement-focused roguelike set across a dynamic cluster of floating islands.
+                                    In this project, I took on the responsibility of programming core gameplay systems, including combat mechanics, movement,
+                                    and vital systems such as inventory and health management.
+                                </p>
+                                <p>
+                                    Source Code: <a href="https://github.com/MilesSMarsh/Archipelago" target="_blank">GitHub Repository</a><br>
+                                    Play Here on Steam: <a href="https://store.steampowered.com/app/2952580/Archipelago/" target="_blank">Steam Page</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p><br><br></p>
+
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat</h2>
+                        <div class="row mb-5 pb-4">
+                            <!-- First Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Combat1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- Second Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Combat2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <p class="mb-4"> The first step I took towards building the combat system in Archipelago was creating a sphere overlap on
+                            the player's right hand bone. This setup destroys a mannequin if it overlaps with the actor.
                         </p>
-                        <!--</div>-->
-                    </div><!--
-						<div class="col-xl-4 col-lg-5">
-							<!-- Share box -->
-                    <!-- COMMENT OUT
-                    <div class="tm-bg-gray tm-share-box">
-                        <h6 class="tm-share-box-title mb-4">Share this video</h6>
-                        <div class="mb-5 d-flex">
-                            <a href="" class="tm-bg-white tm-share-button"><i class="fab fa-facebook"></i></a>
-                            <a href="" class="tm-bg-white tm-share-button"><i class="fab fa-twitter"></i></a>
-                            <a href="" class="tm-bg-white tm-share-button"><i class="fab fa-pinterest"></i></a>
-                            <a href="" class="tm-bg-white tm-share-button"><i class="far fa-envelope"></i></a>
+
+                        <p class="mb-4"> I worked on making the sword swing functional by creating an Input Action for the attack. This triggers the
+                            attack animation montage, and to ensure the animation isn’t interrupted by spam clicking, I created an IsAttacking variable.
+                        </p>
+
+                        <p class="mb-4"> To add depth to the combat, I developed a combo attack system. I created an attack count variable to
+                            track which step of the combo the player is on. If the player stops attacking, the attack count resets, forcing them to restart the combo on the next attack.
+                        </p>
+
+                        <p class="mb-4"> I added anim notifies to the animation montages at each part of the combo, so the system would track when
+                            a player completes a combo step and move to the next montage animation.
+                        </p>
+
+                        <p class="mb-4"> For the right-hand bone tracking, I added an OnSphereOverlap function that tracks the IK hand bone.
+                            If the sphere overlaps with an actor, a mannequin or set actor variable is destroyed.
+                            <br> <br>
+                        </p>
+
+                        <div class="row mb-5 pb-4">
+                            <!-- First Video   -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Combat3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- Second Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Combat4.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
-                        <p class="mb-4">Author: <a href="https://templatemo.com" class="tm-text-link">TemplateMo</a></p>
-                        <a href="#" class="tm-bg-white px-5 mb-4 d-inline-block tm-text-primary tm-likes-box tm-liked">
-                            <i class="fas fa-heart mr-3 tm-liked-icon"></i>
-                            <i class="far fa-heart mr-3 tm-not-liked-icon"></i>
-                            <span id="tm-likes-count">486 likes</span>
-                        </a>
-                        <div>
-                            <button class="btn btn-primary p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Download Video</span></button>
+                        <p class="mb-4"> I also worked on integrating death animations. When the character’s health runs out, I ensured a death
+                            animation plays, and I added a delay to allow the animation to finish before the actor is destroyed.
+                        </p>
+
+                        <p class="mb-4"> The death system checks if the character is already dead to prevent the animation from playing repeatedly
+                            when hit again. It’s also designed to keep the character dead on the ground for a while before removing them from the game world.
+                        </p>
+
+                        <p class="mb-4"> Overall, I implemented a combo-based melee combat system with attack sequences, death animations,
+                            and appropriate checks to make sure everything works smoothly without interruptions.
+                            <br> <br>
+                        </p>
+
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Dash and Time Dilation </h2>
+                        <div class="row mb-5 pb-4">
+                            <!-- First Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Dash1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- Second Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Dash2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
+
+                        <p class="mb-4"> A key gameplay mechanic in Archipelago is the player's ability to navigate through the floating islands.
+                            To enhance this we came up with the idea of a dash ability where pressing the RMB propels the player forward.
+                        </p>
+
+                        <p class="mb-4"> The player has access to three dashes, which reset upon landing or when they collide with an orb.
+                            These orbs, floating spheres scattered between the islands, trigger time dilation when the player dashes into them, allowing them a brief moment to aim their next dash.
+                        </p>
+
+                        <p class="mb-4"> The dash functionality was implemented by modifying the jump mechanic and adjusting its values.
+                            Instead of the traditional up-and-down motion, the dash propels the player forward by a fixed distance.
+                        </p>
+
+                        <p class="mb-4"> The orbs themselves are pawns with collision spheres, and when the player intersects with them,
+                            time dilation activates for a few seconds, giving the player time to strategize their next move.
+                            <br> <br>
+                        </p>
+
+
                     </div>
-                </div>-->
                 </div>
             </main>
         </div> <!-- .tm-content-container -->
