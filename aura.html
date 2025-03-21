@@ -82,9 +82,9 @@ https://templatemo.com/tm-552-video-catalog
                             <div class="tm-project-info">
                                 <h2 class="tm-text-primary tm-catalog-item-title">Project Info</h2>
                                 <ul>
-                                    <li><strong>Role:</strong> <span>Gameplay Programmer</span></li>
+                                    <li><strong>Role:</strong> <span>Solo Developer </span></li>
                                     <li><strong>Team Size:</strong> <span>1</span></li>
-                                    <li><strong>Time Frame:</strong> <span>3 Months (Jan - March 2025)</span></li>
+                                    <li><strong>Time Frame:</strong> <span>Jan - Present (In Progress)</span></li>
                                     <li><strong>Engine:</strong> <span>Unreal Engine 5</span></li>
                                 </ul>
                             </div>
@@ -92,20 +92,20 @@ https://templatemo.com/tm-552-video-catalog
                             <div class="tm-about">
                                 <h2 class="tm-text-primary tm-catalog-item-title">About</h2>
                                 <p>
-                                    Archipelago is a fast-paced, movement-focused roguelike set across a dynamic cluster of floating islands.
-                                    In this project, I took on the responsibility of programming core gameplay systems, including combat mechanics, movement,
-                                    and vital systems such as inventory and health management.
+
+                                    Aura is a top-down RPG built using Unreal Engine's Gameplay Ability System (GAS). Designed primarily for a solo player experience, it also supports multiplayer functionality. Players control Aura, casting spells, battling enemies, and leveling up attributes and skills to grow stronger.
+                                    This project extensively utilizes Gameplay Effects, Gameplay Tags, Gameplay Attributes, Gameplay Cues, and all core aspects of GAS. I developed Aura by following an online course with over 100 hours of video content, applying what I learned to create a fully functional RPG system.
                                 </p>
                                 <p>
-                                    Source Code: <a href="https://github.com/MilesSMarsh/Archipelago" target="_blank">GitHub Repository</a><br>
-                                    Play Here on Steam: <a href="https://store.steampowered.com/app/2952580/Archipelago/" target="_blank">Steam Page</a>
+                                    Source Code: <a href="https://github.com/MarkMcAteer/Aura" target="_blank">GitHub Repository</a><br>
+                                    Course: <a href="https://www.udemy.com/course/unreal-engine-5-gas-top-down-rpg/" target="_blank">Course Link</a><br>
                                 </p>
                             </div>
                         </div>
 
                         <p><br><br></p>
 
-                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat</h2>
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat </h2>
                         <div class="row mb-5 pb-4">
                             <!-- First Video -->
                             <div class="col-md-6 text-center">
@@ -127,23 +127,13 @@ https://templatemo.com/tm-552-video-catalog
                             the player's right hand bone. This setup destroys a mannequin if it overlaps with the actor.
                         </p>
 
-                        <p class="mb-4"> I worked on making the sword swing functional by creating an Input Action for the attack. This triggers the
-                            attack animation montage, and to ensure the animation isn’t interrupted by spam clicking, I created an IsAttacking variable.
-                        </p>
-
-                        <p class="mb-4"> To add depth to the combat, I developed a combo attack system. I created an attack count variable to
-                            track which step of the combo the player is on. If the player stops attacking, the attack count resets, forcing them to restart the combo on the next attack.
-                        </p>
-
-                        <p class="mb-4"> I added anim notifies to the animation montages at each part of the combo, so the system would track when
-                            a player completes a combo step and move to the next montage animation.
-                        </p>
-
                         <p class="mb-4"> For the right-hand bone tracking, I added an OnSphereOverlap function that tracks the IK hand bone.
                             If the sphere overlaps with an actor, a mannequin or set actor variable is destroyed.
                             <br> <br>
                         </p>
 
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Enemies and AI </h2>
+                        
                         <div class="row mb-5 pb-4">
                             <!-- First Video   -->
                             <div class="col-md-6 text-center">
@@ -174,7 +164,43 @@ https://templatemo.com/tm-552-video-catalog
                             <br> <br>
                         </p>
 
-                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Dash and Time Dilation </h2>
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Attributes </h2>
+                        <div class="row mb-5 pb-4">
+                            <!-- First Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Dash1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- Second Video -->
+                            <div class="col-md-6 text-center">
+                                <video width="400" height="225" autoplay loop muted playsinline>
+                                    <source src="video/Arch_Dash2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <p class="mb-4"> A key gameplay mechanic in Archipelago is the player's ability to navigate through the floating islands.
+                            To enhance this we came up with the idea of a dash ability where pressing the RMB propels the player forward.
+                        </p>
+
+                        <p class="mb-4"> The player has access to three dashes, which reset upon landing or when they collide with an orb.
+                            These orbs, floating spheres scattered between the islands, trigger time dilation when the player dashes into them, allowing them a brief moment to aim their next dash.
+                        </p>
+
+                        <p class="mb-4"> The dash functionality was implemented by modifying the jump mechanic and adjusting its values.
+                            Instead of the traditional up-and-down motion, the dash propels the player forward by a fixed distance.
+                        </p>
+
+                        <p class="mb-4"> The orbs themselves are pawns with collision spheres, and when the player intersects with them,
+                            time dilation activates for a few seconds, giving the player time to strategize their next move.
+                            <br> <br>
+                        </p>
+
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Consumables </h2>
                         <div class="row mb-5 pb-4">
                             <!-- First Video -->
                             <div class="col-md-6 text-center">
