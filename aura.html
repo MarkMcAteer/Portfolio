@@ -206,20 +206,23 @@ https://templatemo.com/tm-552-video-catalog
                             </div>
                         </div>
 
-                        <p class="mb-4"> A key gameplay mechanic in Archipelago is the player's ability to navigate through the floating islands.
-                            To enhance this we came up with the idea of a dash ability where pressing the RMB propels the player forward.
+                        <p class="mb-4"> The Shaman is an old wizard type character that can spawn Minions and shoot fireballs. 
+                            The fire step in creating the Minion spawning ability was finding the spawn locations.
                         </p>
 
-                        <p class="mb-4"> The player has access to three dashes, which reset upon landing or when they collide with an orb.
-                            These orbs, floating spheres scattered between the islands, trigger time dilation when the player dashes into them, allowing them a brief moment to aim their next dash.
+                        <p class="mb-4"> The first step was finding locations to spawn the Minions with the GetSpawnLocations function.
+                            The function calculates the spawn locations by first determining the character's forward direction 
+                            and location. It then spreads the spawn points evenly within a defined area, considering the number of 
+                            minions to spawn and the spread distance. The function uses RotateAngleAxis to calculate the position of 
+                            each spawn within the specified spread area. For each potential spawn location, the function performs a 
+                            line trace to ensure that the spot is not blocked by any obstacles. If an obstruction is detected, 
+                            it adjusts the spawn point to the point of impact.
                         </p>
-
-                        <p class="mb-4"> The dash functionality was implemented by modifying the jump mechanic and adjusting its values.
-                            Instead of the traditional up-and-down motion, the dash propels the player forward by a fixed distance.
-                        </p>
-
-                        <p class="mb-4"> The orbs themselves are pawns with collision spheres, and when the player intersects with them,
-                            time dilation activates for a few seconds, giving the player time to strategize their next move.
+                        
+                        <p class="mb-4"> The function returns an array of FVector values representing the valid spawn locations 
+                            for the minions, which can then be used to spawn the minions at those positions. Additionally, 
+                            the GetRandomMinionClass function randomly selects a minion class from a predefined list, 
+                            allowing for diverse types of minions to be summoned during gameplay.
                             <br> <br>
                         </p>
 
