@@ -105,7 +105,7 @@ https://templatemo.com/tm-552-video-catalog
 
                         <p><br><br></p>
 
-                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat </h2>
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Combat (Projectiles) </h2>
                         <div class="row mb-5 pb-4">
                             <!-- First Video -->
                             <div class="col-md-6 text-center">
@@ -123,13 +123,32 @@ https://templatemo.com/tm-552-video-catalog
                                 </video>
                             </div>
                         </div>
-                        <p class="mb-4"> The first step I took towards building the combat system in Archipelago was creating a sphere overlap on
-                            the player's right hand bone. This setup destroys a mannequin if it overlaps with the actor.
+                        <p class="mb-4"> Currently, the project features one implemented attack spell: the fireball. 
+                            This spell is built upon a custom projectile parent class that I developed, 
+                            which itself inherits from a gameplay ability parent class. The fireball follows Unreal 
+                            Engine’s Gameplay Ability System (GAS) structure, ensuring modularity and scalability for future abilities.
                         </p>
 
-                        <p class="mb-4"> For the right-hand bone tracking, I added an OnSphereOverlap function that tracks the IK hand bone.
-                            If the sphere overlaps with an actor, a mannequin or set actor variable is destroyed.
-                            <br> <br>
+                        <p class="mb-4"> The SpawnProjectile function is responsible for spawning projectiles while
+                            ensuring execution only occurs on the server by checking for authority. It determines the
+                            spawn location via the combat interface, calculates the appropriate rotation toward the target,
+                            and applies an optional pitch override if specified. A transform is then created using these values,
+                            and the projectile is spawned using SpawnActorDeferred< AAuraProjectile >(), allowing modifications
+                            before finalization.
+                        </p>
+
+                        <p class="mb-4">
+                            Once the projectile is instantiated, a gameplay effect context is created using the ability 
+                            system component, linking it to the ability and projectile. Relevant hit results and source
+                            objects are added for tracking, and an outgoing gameplay effect spec is generated to define the 
+                            damage properties. The function then iterates through DamageTypes, scaling damage values based on 
+                            the ability level and assigning them accordingly. Finally, the projectile stores this effect spec
+                            handle and completes its spawn process via FinishSpawning().
+                        </p>
+
+                        <p class="mb-4"> 
+                            <br>SpawnProjectile is then called in a Gameplay Ability blueprint class where the firing animation 
+                            montage and projectile location are passed in.  <br>
                         </p>
 
                         <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Enemies and AI </h2>
@@ -151,20 +170,24 @@ https://templatemo.com/tm-552-video-catalog
                                 </video>
                             </div>
                         </div>
-                        <p class="mb-4"> I also worked on integrating death animations. When the character’s health runs out, I ensured a death
-                            animation plays, and I added a delay to allow the animation to finish before the actor is destroyed.
+                        <p class="mb-4"> All the enemies in the project use the same behavioral tree and blackboard. 
+                            The tree first calls the FindNearestPlayer function, a blueprint class inheriting from 
+                            BTService Blueprint Base. FindNearestPlayer gets the distance from the controlled pawn,
+                            Aura, and the other actor, the enemy, using GetDistanceTo. It then calculates the 
+                            distance and determines if the two actors are close enough and the enemies can “see” Aura. 
+                            The blackboard values are set are passed to the behavior tree to make the decision of whether to go to Aura.
                         </p>
 
-                        <p class="mb-4"> The death system checks if the character is already dead to prevent the animation from playing repeatedly
-                            when hit again. It’s also designed to keep the character dead on the ground for a while before removing them from the game world.
+                        <p class="mb-4">
+                            The behavior tree then checks if the enemy is alive, if the enemy has a target, and if the enemy is 
+                            hit reacting. If these checks pass the selector checks whether the enemy is a ranged attacker, melee
+                            attacker and the distance to Aura. If an enemy is a Melee attacker then the distance to attack 
+                            will be less than that of a ranged attacker. The selector knows what type of attacker an enemy is
+                            by checking its Gameplay Tag set on the enemies blueprint.
+                            <br> <br> 
                         </p>
 
-                        <p class="mb-4"> Overall, I implemented a combo-based melee combat system with attack sequences, death animations,
-                            and appropriate checks to make sure everything works smoothly without interruptions.
-                            <br> <br>
-                        </p>
-
-                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Attributes </h2>
+                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Enemies and AI (Shaman) </h2>
                         <div class="row mb-5 pb-4">
                             <!-- First Video -->
                             <div class="col-md-6 text-center">
