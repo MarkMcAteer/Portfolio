@@ -223,7 +223,6 @@ https://templatemo.com/tm-552-video-catalog
                             <br> <br>
                         </p>
 
-                        <h2 class="tm-text-primary mb-3 tm-catalog-item-title"> Consumables </h2>
                         <div class="row mb-5 pb-4">
                             <!-- First Video -->
                             <div class="col-md-6 text-center">
@@ -242,20 +241,16 @@ https://templatemo.com/tm-552-video-catalog
                             </div>
                         </div>
 
-                        <p class="mb-4"> A key gameplay mechanic in Archipelago is the player's ability to navigate through the floating islands.
-                            To enhance this we came up with the idea of a dash ability where pressing the RMB propels the player forward.
+                        <p class="mb-4"> After implementing GetSpawnLocations in C++, the remainder of the ability was completed 
+                            in a Gameplay Ability Blueprint class. First, GetSpawnLocations is called, returning an 
+                            array of valid spawn locations. For each location, the SpawnSystemAtLocation() function is 
+                            called to trigger the corresponding Niagara Effect at that position. Then, the summon montage is 
+                            played, and the SpawnActor() function is executed within a loop, passing each spawn location one at a time.
                         </p>
 
-                        <p class="mb-4"> The player has access to three dashes, which reset upon landing or when they collide with an orb.
-                            These orbs, floating spheres scattered between the islands, trigger time dilation when the player dashes into them, allowing them a brief moment to aim their next dash.
-                        </p>
-
-                        <p class="mb-4"> The dash functionality was implemented by modifying the jump mechanic and adjusting its values.
-                            Instead of the traditional up-and-down motion, the dash propels the player forward by a fixed distance.
-                        </p>
-
-                        <p class="mb-4"> The orbs themselves are pawns with collision spheres, and when the player intersects with them,
-                            time dilation activates for a few seconds, giving the player time to strategize their next move.
+                        <p class="mb-4"> The minions' rotation is set using LookAtLocation(), ensuring they face the player based on 
+                            the Shaman's orientation. When all minions have been killed, the number of minions to summon is 
+                            decremented by one, so the Shaman will summon one less minion each time until no minions are spawned.
                             <br> <br>
                         </p>
 
